@@ -1,0 +1,125 @@
+@import "./variables.scss";
+
+.listing-card {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+
+  &:hover {
+    @include shadow;
+  }
+
+  .slider-container {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+
+      .slide {
+        position: relative;
+        flex: 0 0 100%;
+        width: 100%;
+        height: 270px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          filter: brightness(85%);
+        }
+
+        .prev-button,
+        .next-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 6px;
+          border-radius: 50%;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(255, 255, 255, 0.7);
+          z-index: 9999;
+
+          &:hover {
+            background-color: white;
+          }
+        }
+
+        .prev-button {
+          left: 10px;
+        }
+
+        .next-button {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .book-button {
+    background-color: #007bff; // Blue background
+    color: white; // White text
+    border: none; // No border
+    padding: 10px 20px; // Padding around the text
+    border-radius: 5px; // Rounded corners
+    cursor: pointer; // Pointer cursor on hover
+    font-size: 16px; // Font size
+    transition: background-color 0.3s; // Smooth transition for hover effect
+  
+    &:hover {
+      background-color: #0056b3; // Darker blue on hover
+    }
+  
+    &:disabled {
+      background-color: #c0c0c0; // Gray for disabled state
+      cursor: not-allowed; // Not allowed cursor for disabled state
+    }
+  }
+
+  .favorite {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 999;
+    background: none;
+  }
+  .popup-message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .popup-message button {
+    margin-top: 10px;
+  }
+}

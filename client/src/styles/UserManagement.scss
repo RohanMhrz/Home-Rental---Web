@@ -1,0 +1,21 @@
+.user-management-wrapper {
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d"); // You can use any image URL
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+  
+    // Optional overlay for readability
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    & > .MuiContainer-root {
+      background-color: rgba(255, 255, 255, 0.9); // Light background for content
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  

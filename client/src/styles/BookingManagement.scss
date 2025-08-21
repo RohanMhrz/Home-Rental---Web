@@ -1,0 +1,151 @@
+// .booking-container {
+//   padding: 2rem;
+
+.booking-container {
+  padding: 2rem;
+  background-image: url('https://picsum.photos/1920/1080'); /* Random image from Lorem Picsum */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+  }
+
+  .MuiTableContainer-root {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background-color: #f3f4f6;
+
+      th {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #374151;
+        padding: 14px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+    }
+
+    tbody {
+      tr {
+        &:hover {
+          background-color: #f9fafb;
+        }
+
+        td {
+          padding: 14px;
+          font-size: 0.9rem;
+          color: #4b5563;
+          border-bottom: 1px solid #e5e7eb;
+        }
+
+        .edit-button {
+          background-color: #3b82f6;
+          color: #fff;
+          font-size: 0.8rem;
+          padding: 6px 16px;
+          border-radius: 6px;
+          text-transform: none;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+
+          &:hover {
+            background-color: #2563eb;
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.25);
+          }
+        }
+      }
+    }
+  }
+
+  .MuiDialogTitle-root {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .MuiDialogContent-root {
+    .MuiTextField-root {
+      margin-top: 1rem;
+
+      label {
+        font-size: 0.9rem;
+        color: #374151;
+      }
+
+      input {
+        font-size: 0.95rem;
+        padding: 10px;
+      }
+    }
+  }
+
+  .MuiDialogActions-root {
+    padding: 1rem;
+
+    button {
+      font-size: 0.85rem;
+      padding: 8px 16px;  /* Slightly more padding for a better size */
+      border-radius: 8px; /* Smoother rounded corners */
+      font-weight: 600; /* Make the text slightly bolder */
+      border: none;  /* Remove default border */
+      outline: none; /* Remove outline to prevent the default focus outline */
+      transition: all 0.3s ease-in-out; /* Smooth transitions for all properties */
+      cursor: pointer; /* Add a pointer cursor on hover */
+    
+      &:hover {
+        transform: translateY(-2px); /* Slight upward movement on hover */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+      }
+    
+      &:active {
+        transform: translateY(0); /* Reset the movement on click */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A bit lighter shadow when pressed */
+      }
+    
+      &:focus {
+        outline: 2px solid #2563eb; /* Outline for focus with a blue color */
+        outline-offset: 2px; /* Offset the outline for better focus visibility */
+      }
+    }
+
+    .MuiButton-containedPrimary {
+      background-color: #3b82f6; /* Blue background */
+      color: white; /* White text */
+      border-radius: 8px;
+      border: none;
+      text-transform: none;
+    
+      &:hover {
+        background-color: #2563eb; /* Darker blue on hover */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+      }
+    
+      &:active {
+        background-color: #1d4ed8; /* Even darker blue on active */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow on click */
+      }
+    
+      &:focus {
+        outline: 2px solid #2563eb; /* Focus outline with a blue color */
+        outline-offset: 2px; /* Offset outline for better visibility */
+      }
+    }
+  }
+}

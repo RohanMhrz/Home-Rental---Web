@@ -1,0 +1,56 @@
+$primary-color: #1976d2; // MUI primary color
+$success-color: #4caf50; // MUI success color
+$error-color: #f44336; // MUI error color
+$background-color: #f5f5f5;
+
+.container {
+    padding: 16px;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+    background-color: $background-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+h4 {
+    color: $primary-color;
+    margin-bottom: 16px;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        background-color: $background-color;
+        color: $primary-color;
+        padding: 12px;
+        text-align: left;
+    }
+
+    td {
+        padding: 12px;
+        border-bottom: 1px solid #e0e0e0;
+
+        &:last-child {
+            display: flex;
+            gap: 8px; // Space between buttons
+        }
+    }
+}
+
+button {
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.snackbar {
+    .MuiAlert-root {
+        font-size: 16px;
+    }
+}

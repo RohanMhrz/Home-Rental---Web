@@ -1,0 +1,199 @@
+
+.admin-dashboard {
+    padding: 2rem;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh; /* Set height to 100vh for full screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    transition: background 0.5s ease-in-out;
+  
+    /* Dark overlay already achieved with gradient */
+  
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  
+
+  
+  /* Dashboard Title */
+  h4 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Grid Styling */
+  .dashboard-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  /* Card Styling */
+  .dashboard-card {
+    width: 100%;
+    max-width: 300px;
+    background: linear-gradient(to bottom, #f7f7f7, #e0e0e0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+  
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    /* Title */
+    h5 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    /* Links */
+    a {
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 5px;
+      transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+      background: #1976d2;
+  
+      &:hover {
+        background: #125aa2;
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  /* Individual Card Colors with Icons */
+  .user-management {
+    border-top: 4px solid #1976d2;
+    background: #e3f2fd;
+  
+    &::before {
+      content: "👤";
+      font-size: 4rem;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.15;
+    }
+  
+    a {
+      background: #1976d2;
+  
+      &:hover {
+        background: #125aa2;
+      }
+    }
+  }
+  
+  .property-management {
+    border-top: 4px solid #28a745;
+    background: #e8f5e9;
+  
+    &::before {
+      content: "🏠";
+      font-size: 4rem;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.15;
+    }
+  
+    a {
+      background: #28a745;
+  
+      &:hover {
+        background: #1e7e34;
+      }
+    }
+  }
+  
+  .booking-management {
+    border-top: 4px solid #ffc107;
+    background: #fff8e1;
+  
+    &::before {
+      content: "📅";
+      font-size: 4rem;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.15;
+    }
+  
+    a {
+      background: #ffc107;
+  
+      &:hover {
+        background: #e0a800;
+      }
+    }
+  }
+  
+  .analytics-reports {
+    border-top: 4px solid #dc3545;
+    background: #f8d7da;
+  
+    &::before {
+      content: "📊";
+      font-size: 4rem;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.15;
+    }
+  
+    a {
+      background: #dc3545;
+  
+      &:hover {
+        background: #c82333;
+      }
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .dashboard-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
